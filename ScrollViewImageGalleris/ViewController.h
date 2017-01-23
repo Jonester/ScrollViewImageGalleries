@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController <UIScrollViewDelegate>
 
+@property (strong, nonatomic) NSArray <UIImage *> *images;
 
 @end
 

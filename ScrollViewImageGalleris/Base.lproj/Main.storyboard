@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FPi-5H-nv9">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="667"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4M-ju-Dcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-169" y="27"/>
+            <point key="canvasLocation" x="-529" y="103"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -84,13 +84,14 @@
                             <constraint firstItem="7Z4-Wd-Tra" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="m8m-Lo-Pgx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ex8-C7-cpQ"/>
                     <connections>
                         <outlet property="scrollView" destination="7Z4-Wd-Tra" id="BSO-oq-dHS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598" y="27"/>
+            <point key="canvasLocation" x="399" y="54"/>
         </scene>
     </scenes>
 </document>

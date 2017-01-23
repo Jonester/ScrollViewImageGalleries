@@ -7,9 +7,14 @@
 //
 
 #import "DetailViewController.h"
+#import "ViewController.h"
 
 @interface DetailViewController ()
+
 @property (weak, nonatomic) IBOutlet UIScrollView *detailScrollView;
+@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) UIImageView *detailImage;
+@property (strong, nonatomic) UIImage *currentImage;
 
 @end
 
@@ -18,8 +23,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.detailImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Lighthouse"]];
+    [self.detailScrollView addSubview:self.detailImage];
+    self.detailScrollView.contentSize = self.detailImage.frame.size;
     
+    self.detailScrollView.maximumZoomScale = 5.0;
+    self.detailScrollView.minimumZoomScale = 0.5;
     
+//    self.detailScrollView.delegate = self;
+    
+}
+
+-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return self.detailImage;
 }
 
 - (void)didReceiveMemoryWarning {
