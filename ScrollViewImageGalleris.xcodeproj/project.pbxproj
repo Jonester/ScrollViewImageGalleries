@@ -13,6 +13,7 @@
 		3C6DB37B1E3690B000C6E1E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6DB3791E3690B000C6E1E9 /* Main.storyboard */; };
 		3C6DB37D1E3690B000C6E1E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C6DB37C1E3690B000C6E1E9 /* Assets.xcassets */; };
 		3C6DB3801E3690B000C6E1E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6DB37E1E3690B000C6E1E9 /* LaunchScreen.storyboard */; };
+		3C6DB3891E36B6D600C6E1E9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DB3881E36B6D600C6E1E9 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		3C6DB37C1E3690B000C6E1E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C6DB37F1E3690B000C6E1E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C6DB3811E3690B000C6E1E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C6DB3871E36B6D600C6E1E9 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		3C6DB3881E36B6D600C6E1E9 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				3C6DB3741E3690B000C6E1E9 /* AppDelegate.m */,
 				3C6DB3761E3690B000C6E1E9 /* ViewController.h */,
 				3C6DB3771E3690B000C6E1E9 /* ViewController.m */,
+				3C6DB3871E36B6D600C6E1E9 /* DetailViewController.h */,
+				3C6DB3881E36B6D600C6E1E9 /* DetailViewController.m */,
 				3C6DB3791E3690B000C6E1E9 /* Main.storyboard */,
 				3C6DB37C1E3690B000C6E1E9 /* Assets.xcassets */,
 				3C6DB37E1E3690B000C6E1E9 /* LaunchScreen.storyboard */,
@@ -153,6 +158,7 @@
 				3C6DB3781E3690B000C6E1E9 /* ViewController.m in Sources */,
 				3C6DB3751E3690B000C6E1E9 /* AppDelegate.m in Sources */,
 				3C6DB3721E3690B000C6E1E9 /* main.m in Sources */,
+				3C6DB3891E36B6D600C6E1E9 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
