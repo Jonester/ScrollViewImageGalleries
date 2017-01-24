@@ -69,30 +69,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Z4-Wd-Tra">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEy-w6-WMa">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="X6X-in-pwN"/>
-                                </connections>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="B2e-UG-SPc">
+                                <rect key="frame" x="168" y="580" width="39" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="6IG-wg-mmq"/>
+                                    <constraint firstAttribute="height" constant="37" id="bUm-lg-TSb"/>
+                                </constraints>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7Z4-Wd-Tra" secondAttribute="bottom" id="8jt-LF-aiO"/>
-                            <constraint firstAttribute="trailing" secondItem="7Z4-Wd-Tra" secondAttribute="trailing" id="c0y-YK-07A"/>
-                            <constraint firstItem="7Z4-Wd-Tra" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dcn-zN-yMa"/>
-                            <constraint firstItem="7Z4-Wd-Tra" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="m8m-Lo-Pgx"/>
+                            <constraint firstItem="dEy-w6-WMa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="588-AS-69S"/>
+                            <constraint firstItem="B2e-UG-SPc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V8g-HG-TLc"/>
+                            <constraint firstAttribute="trailing" secondItem="dEy-w6-WMa" secondAttribute="trailing" id="VE7-hK-Jka"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="B2e-UG-SPc" secondAttribute="bottom" constant="50" id="aOr-WD-sP5"/>
+                            <constraint firstItem="dEy-w6-WMa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hMh-i2-b5K"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dEy-w6-WMa" secondAttribute="bottom" id="zR2-eI-gIm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ex8-C7-cpQ"/>
                     <connections>
-                        <outlet property="scrollView" destination="7Z4-Wd-Tra" id="BSO-oq-dHS"/>
+                        <outlet property="pageControl" destination="B2e-UG-SPc" id="9dp-Af-ew1"/>
+                        <outlet property="scrollView" destination="dEy-w6-WMa" id="ejv-zN-wE3"/>
                         <segue destination="w1q-39-BuL" kind="show" identifier="DetailViewController" id="ROj-d2-nOK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-64" y="36"/>
+            <point key="canvasLocation" x="-64.799999999999997" y="35.532233883058474"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4hG-Zf-enx">
