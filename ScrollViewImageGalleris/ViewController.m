@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DetailViewController.h"
 
 @interface ViewController ()
 
@@ -27,7 +28,7 @@
     
 }
 
--(void)setUpImageViews {
+- (void)setUpImageViews {
     
     CGFloat imagePositionX = 0;
     
@@ -38,16 +39,34 @@
         imageView.frame = imageFrame;
         imagePositionX += CGRectGetWidth(imageFrame);
         [self.scrollView addSubview:imageView];
+     
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(imageTapped:)];
+        [imageView addGestureRecognizer:tapGesture];
+        imageView.userInteractionEnabled = YES;
+        
     }
+    
     self.scrollView.pagingEnabled = YES;
     self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.bounds) * self.images.count, CGRectGetHeight(self.view.bounds));
+    
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)imageTapped:(UITapGestureRecognizer *)sender {
+    
+    UIImageView *imageView = (UIImageView *)sender.view;
+    [self performSegueWithIdentifier:@"DetailViewController" sender:imageView.image];
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"DetailViewController"]) {
+        UIImage *seguedImage = (UIImage *)sender;
+        
+        DetailViewController *dvController = segue.destinationViewController;
+
+        dvController.currentImage = seguedImage;
+    }
+}
+
 
 
 @end

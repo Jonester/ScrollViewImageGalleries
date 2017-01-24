@@ -7,14 +7,11 @@
 //
 
 #import "DetailViewController.h"
-#import "ViewController.h"
 
 @interface DetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UIScrollView *detailScrollView;
-@property (strong, nonatomic) ViewController *viewController;
 @property (strong, nonatomic) UIImageView *detailImage;
-@property (strong, nonatomic) UIImage *currentImage;
 
 @end
 
@@ -23,14 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.detailImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Lighthouse"]];
-    [self.detailScrollView addSubview:self.detailImage];
+    self.detailImage = [[UIImageView alloc]initWithImage:self.currentImage];
     self.detailScrollView.contentSize = self.detailImage.frame.size;
+    
+    [self.detailImage setTranslatesAutoresizingMaskIntoConstraints:YES];
+    [self.detailScrollView addSubview:self.detailImage];
     
     self.detailScrollView.maximumZoomScale = 5.0;
     self.detailScrollView.minimumZoomScale = 0.5;
-    
-//    self.detailScrollView.delegate = self;
     
 }
 
@@ -43,14 +40,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
